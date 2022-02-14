@@ -18,6 +18,8 @@
   --footer-background-color: #2f303a;
   --hero-background-color: #2f303a;
   --button-accent-color: #188ce8;
+  --border-color-header: #ececec;
+  --border-color: #eeeeee;
 }
 ul {
   list-style: none;
@@ -36,6 +38,8 @@ p {
 }
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .link {
@@ -74,7 +78,7 @@ body {
 
 /* Шапка */
 .header {
-  border-bottom: 1px solid #ececec;
+  border-bottom: 1px solid var(--border-color);
 }
 .main-nav {
   display: flex;
@@ -95,10 +99,7 @@ body {
   font-size: 26px;
   line-height: 1.19;
 }
-.logo:hover,
-.logo:focus {
-  color: var(--accent-color);
-}
+
 .logo-name {
   color: var(--accent-color);
 }
@@ -156,6 +157,8 @@ body {
 /* секция герой */
 
 .hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
   background-color: var(--hero-background-color);
   text-align: center;
 }
@@ -173,7 +176,10 @@ body {
   background-color: var(--button-accent-color);
 }
 .hero-title {
+  width: 696px;
   margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -247,7 +253,10 @@ body {
 }
 .card-content {
   padding: 20px 24px;
-  border: 1px solid #eeeeee;
+  border-left: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--white-color);
 }
 
 .project-item:nth-child(3n) {
@@ -318,6 +327,7 @@ body {
   margin-right: 30px;
 }
 .container-foto {
+  background-color: var(--white-color);
   padding-top: 30px;
   padding-bottom: 30px;
 }
@@ -351,10 +361,6 @@ body {
   padding: 0;
   margin-bottom: 20px;
   color: var(--white-color);
-}
-.footer .logo:hover,
-.footer .logo:link {
-  color: var(--accent-color);
 }
 
 .footer-contact .location {
